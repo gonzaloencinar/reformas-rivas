@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformas en Rivas-Vaciamadrid | Empresa de Reformas Integrales</title>
+    <meta name="description" content="Expertos en reformas en Rivas-Vaciamadrid. Especialistas en reformas integrales, baños, cocinas, pisos y locales. Solicita tu presupuesto sin compromiso. Calidad garantizada.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Reformas en Rivas-Vaciamadrid | Empresa de Reformas Integrales">
+    <meta property="og:description" content="Expertos en reformas en Rivas-Vaciamadrid. Especialistas en reformas integrales, baños, cocinas, pisos y locales.">
+    <meta property="og:url" content="https://[PLACEHOLDER_DOMINIO]">
+    <meta property="og:site_name" content="Reformas en Rivas-Vaciamadrid">
+    <meta property="og:image" content="https://placehold.co/1200x630/e2e8f0/1e293b?text=Reformas+Rivas">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://[PLACEHOLDER_DOMINIO]">
+
+    <!-- Preload & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@700;900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Blue-600
+                        secondary: '#1e40af', // Blue-800
+                        accent: '#f59e0b', // Amber-500
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        html { scroll-behavior: smooth; }
+        
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        /* Accordion Transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .accordion-content.active {
+            max-height: 500px; /* Arbitrary large height */
+        }
+        
+        /* Cookie Banner */
+        #cookie-banner {
+            transition: transform 0.5s ease-in-out;
+            transform: translateY(100%);
+        }
+        #cookie-banner.visible {
+            transform: translateY(0);
+        }
+
+        /* Dropdown Hover for Desktop */
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Reformas en Rivas-Vaciamadrid",
+      "image": "https://placehold.co/1200x630",
+      "@id": "https://[PLACEHOLDER_DOMINIO]",
+      "url": "https://[PLACEHOLDER_DOMINIO]",
+      "telephone": "[PLACEHOLDER_TELEFONO]",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[PLACEHOLDER_DIRECCION]",
+        "addressLocality": "Rivas-Vaciamadrid",
+        "postalCode": "28521",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.3516,
+        "longitude": -3.5173
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una reforma integral en Rivas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El precio de una reforma integral depende de los metros cuadrados, calidades elegidas y alcance de la obra. Ofrecemos presupuestos personalizados y cerrados tras una visita gratuita."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo tarda una reforma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los plazos varían según la envergadura. Una reforma de baño puede tardar 5-7 días, mientras que una integral puede llevar de 4 a 8 semanas. Garantizamos plazos por contrato."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Gestionáis las licencias de obra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, nos encargamos de toda la gestión burocrática y licencias necesarias con el Ayuntamiento de Rivas-Vaciamadrid para que no tengas que preocuparte por nada."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Ofrecéis garantía en las reformas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutamente. Todas nuestras reformas cuentan con garantía legal tanto en materiales como en mano de obra para tu total tranquilidad."
+        }
+      }]
+    }
+    </script>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-white">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white shadow-md transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group" aria-label="Inicio">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">R</div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg leading-none text-slate-900 group-hover:text-primary transition-colors">Reformas</span>
+                    <span class="text-xs font-medium text-slate-500">en Rivas-Vaciamadrid</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <div class="relative group py-4">
+                    <a href="#servicios" class="font-medium text-slate-700 hover:text-primary flex items-center gap-1">
+                        Servicios
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <!-- Dropdown -->
+                    <div class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-lg py-2 hidden group-hover:block border border-slate-100">
+                        <a href="#reformas-integrales" class="block px-4 py-2 hover:bg-slate-50 hover:text-primary text-sm">Reformas Integrales</a>
+                        <a href="#reformas-banos" class="block px-4 py-2 hover:bg-slate-50 hover:text-primary text-sm">Reformas de Baños</a>
+                        <a href="#reformas-cocinas" class="block px-4 py-2 hover:bg-slate-50 hover:text-primary text-sm">Reformas de Cocinas</a>
+                        <a href="#reformas-pisos" class="block px-4 py-2 hover:bg-slate-50 hover:text-primary text-sm">Reformas de Pisos</a>
+                        <a href="#reformas-locales" class="block px-4 py-2 hover:bg-slate-50 hover:text-primary text-sm">Reformas de Locales</a>
+                        <a href="#otros-servicios" class="block px-4 py-2 hover:bg-slate-50 hover:text-primary text-sm">Otros Servicios</a>
+                    </div>
+                </div>
+                <a href="#por-que-nosotros" class="font-medium text-slate-700 hover:text-primary">Por qué nosotros</a>
+                <a href="#como-trabajamos" class="font-medium text-slate-700 hover:text-primary">Cómo trabajamos</a>
+                <a href="#faq" class="font-medium text-slate-700 hover:text-primary">FAQ</a>
+                <a href="#contacto" class="font-medium text-slate-700 hover:text-primary">Contacto</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="tel:[PLACEHOLDER_TELEFONO]" class="hidden md:flex items-center gap-2 bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-primary/30" aria-label="Llamar al [PLACEHOLDER_TELEFONO]">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>[PLACEHOLDER_TELEFONO]</span>
+                </a>
+                
+                <button id="menu-toggle" class="lg:hidden p-2 text-slate-700 hover:text-primary" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-50 p-6 overflow-y-auto lg:hidden">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-heading font-bold text-xl text-slate-900">Menú</span>
+                <button id="menu-close" class="text-slate-500 hover:text-red-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <div class="border-b border-slate-100 pb-4">
+                    <span class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Servicios</span>
+                    <a href="#reformas-integrales" class="block py-2 pl-2 text-slate-700 hover:text-primary border-l-2 border-transparent hover:border-primary bg-slate-50 mb-1 rounded-r">Reformas Integrales</a>
+                    <a href="#reformas-banos" class="block py-2 pl-2 text-slate-700 hover:text-primary border-l-2 border-transparent hover:border-primary bg-slate-50 mb-1 rounded-r">Reformas de Baños</a>
+                    <a href="#reformas-cocinas" class="block py-2 pl-2 text-slate-700 hover:text-primary border-l-2 border-transparent hover:border-primary bg-slate-50 mb-1 rounded-r">Reformas de Cocinas</a>
+                    <a href="#reformas-pisos" class="block py-2 pl-2 text-slate-700 hover:text-primary border-l-2 border-transparent hover:border-primary bg-slate-50 mb-1 rounded-r">Reformas de Pisos</a>
+                    <a href="#reformas-locales" class="block py-2 pl-2 text-slate-700 hover:text-primary border-l-2 border-transparent hover:border-primary bg-slate-50 mb-1 rounded-r">Reformas de Locales</a>
+                    <a href="#otros-servicios" class="block py-2 pl-2 text-slate-700 hover:text-primary border-l-2 border-transparent hover:border-primary bg-slate-50 rounded-r">Otros Servicios</a>
+                </div>
+                <a href="#por-que-nosotros" class="font-medium text-lg text-slate-800">Por qué nosotros</a>
+                <a href="#como-trabajamos" class="font-medium text-lg text-slate-800">Cómo trabajamos</a>
+                <a href="#faq" class="font-medium text-lg text-slate-800">Preguntas Frecuentes</a>
+                <a href="#contacto" class="font-medium text-lg text-slate-800">Contacto</a>
+                <a href="tel:[PLACEHOLDER_TELEFONO]" class="mt-4 w-full bg-primary text-white text-center py-3 rounded-lg font-bold">Llamar Ahora</a>
+            </nav>
+        </div>
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden backdrop-blur-sm"></div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[600px] flex items-center justify-center bg-slate-900 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img 
+                    src="https://placehold.co/1920x1080/1e293b/cbd5e1?text=Reformas+Integrales+en+Rivas" 
+                    alt="Empresa de Reformas en Rivas-Vaciamadrid trabajando en una vivienda" 
+                    class="w-full h-full object-cover opacity-40"
+                    width="1920"
+                    height="1080"
+                    fetchpriority="high"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+            </div>
+
+            <div class="container mx-auto px-4 z-10 relative text-center max-w-4xl">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-blue-200 border border-blue-500/30 text-sm font-semibold mb-6 tracking-wide backdrop-blur-sm">Expertos en Construcción y Diseño</span>
+                <h1 class="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight text-shadow">
+                    Empresa de Reformas en <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Rivas-Vaciamadrid</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Transformamos tu vivienda o local con acabados de primera calidad. Cumplimos plazos, presupuesto cerrado y limpieza garantizada.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg font-bold text-lg shadow-lg shadow-blue-900/50 transform hover:scale-105 transition-all">
+                        SOLICITAR SERVICIO URGENTE
+                    </a>
+                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-semibold backdrop-blur-sm transition-all">
+                        Pedir Presupuesto
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="bg-white border-b border-slate-100 relative z-20 -mt-8 mx-4 md:mx-auto max-w-6xl rounded-xl shadow-xl p-6 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800">+15 Años de Experiencia</h3>
+                    <p class="text-sm text-slate-500">Profesionales cualificados</p>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800">Cumplimiento de Plazos</h3>
+                    <p class="text-sm text-slate-500">Sin sorpresas ni retrasos</p>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800">Precio Cerrado</h3>
+                    <p class="text-sm text-slate-500">Presupuesto sin compromiso</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios -->
+        <section id="servicios" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-4">Nuestros Servicios de Reformas</h2>
+                    <p class="text-slate-600">Ofrecemos soluciones completas para renovar tu espacio. Desde pequeños cambios hasta proyectos llave en mano en Rivas-Vaciamadrid.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Integrales -->
+                    <article id="reformas-integrales" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+Integrales" alt="Reformas Integrales en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas integrales</h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">Renovamos tu vivienda al completo. Coordinación total de gremios, diseño de interiores y acabados perfectos para estrenar casa sin mudarte.</p>
+                            <a href="#contacto" class="inline-flex items-center text-primary font-semibold hover:text-secondary text-sm">
+                                Pedir Presupuesto
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Baños -->
+                    <article id="reformas-banos" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="images/baño reformado.png" alt="Reformas de Baños en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de baños</h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">Cambio de bañera por plato de ducha, sanitarios modernos, alicatados de diseño y mobiliario a medida. Tu baño nuevo en tiempo récord.</p>
+                            <a href="#contacto" class="inline-flex items-center text-primary font-semibold hover:text-secondary text-sm">
+                                Pedir Presupuesto
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Cocinas -->
+                    <article id="reformas-cocinas" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="images/cocina reformada.png" alt="Reformas de Cocinas en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de cocinas</h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">Diseñamos la cocina de tus sueños. Muebles funcionales, encimeras resistentes, fontanería e iluminación para crear el corazón de tu hogar.</p>
+                            <a href="#contacto" class="inline-flex items-center text-primary font-semibold hover:text-secondary text-sm">
+                                Pedir Presupuesto
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Pisos -->
+                    <article id="reformas-pisos" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+de+Pisos" alt="Reformas de Pisos en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de pisos</h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">Actualización completa de apartamentos. Suelos, pintura, alisado de paredes, carpintería interior y exterior para revalorizar tu propiedad.</p>
+                            <a href="#contacto" class="inline-flex items-center text-primary font-semibold hover:text-secondary text-sm">
+                                Pedir Presupuesto
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: Locales -->
+                    <article id="reformas-locales" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+de+Locales" alt="Reformas de Locales Comerciales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de locales</h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">Adaptamos tu negocio a las nuevas normativas y tendencias. Oficinas, tiendas y restauración. Rapidez para minimizar el cierre de actividad.</p>
+                            <a href="#contacto" class="inline-flex items-center text-primary font-semibold hover:text-secondary text-sm">
+                                Pedir Presupuesto
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 6: Otros -->
+                    <article id="otros-servicios" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Otros+Servicios" alt="Otros Servicios de Reformas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-slate-900 mb-3">Otros servicios</h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">Fontanería, electricidad, pintura decorativa, pladur, aislamiento acústico y térmico. Cualquier necesidad de obra menor o mantenimiento.</p>
+                            <a href="#contacto" class="inline-flex items-center text-primary font-semibold hover:text-secondary text-sm">
+                                Contactar
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="por-que-nosotros" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <img src="https://placehold.co/800x600/e2e8f0/1e293b?text=Calidad+en+cada+detalle" alt="Detalle de reforma de calidad" class="rounded-xl shadow-2xl w-full" loading="lazy" width="800" height="600">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-6">Por qué elegirnos para tu reforma en Rivas</h2>
+                        <p class="text-slate-600 mb-8 text-lg">Entendemos que una obra puede ser estresante. Por eso, nuestro enfoque se basa en la transparencia, la planificación y la excelencia en la ejecución.</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Planificación Detallada</h4>
+                                    <p class="text-sm text-slate-600">Cronograma de obra definido desde el primer día para evitar retrasos.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Materiales de Calidad</h4>
+                                    <p class="text-sm text-slate-600">Trabajamos con proveedores de confianza para asegurar durabilidad.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Limpieza y Cuidado</h4>
+                                    <p class="text-sm text-slate-600">Protegemos tu hogar y zonas comunes. Entregamos la obra limpia.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Garantía por Escrito</h4>
+                                    <p class="text-sm text-slate-600">Respondemos por nuestros trabajos con garantía post-obra.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience -->
+        <section class="py-20 bg-slate-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">¿A quién nos dirigimos?</h2>
+                    <p class="text-slate-400">Soluciones adaptadas a cada tipo de cliente y necesidad.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-primary transition-colors">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Hogar</h3>
+                        <p class="text-slate-300">Particulares que quieren renovar su vivienda habitual o segunda residencia. Priorizamos el confort y el diseño personalizado.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-primary transition-colors">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Comunidades</h3>
+                        <p class="text-slate-300">Reformas de portales, fachadas, tejados y zonas comunes. Gestión eficiente para minimizar molestias a los vecinos.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-primary transition-colors">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Empresas</h3>
+                        <p class="text-slate-300">Locales comerciales, oficinas y naves. Ejecución rápida para que tu negocio empiece a facturar cuanto antes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Work -->
+        <section id="como-trabajamos" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 text-center mb-16">Cómo Trabajamos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="relative">
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow h-full border-t-4 border-primary">
+                            <span class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-full font-bold shadow-lg">1</span>
+                            <h3 class="font-bold text-lg mb-2 mt-2">Visita y Medición</h3>
+                            <p class="text-slate-600 text-sm">Visitamos tu inmueble gratis para tomar medidas y escuchar tus ideas.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow h-full border-t-4 border-primary">
+                            <span class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-full font-bold shadow-lg">2</span>
+                            <h3 class="font-bold text-lg mb-2 mt-2">Presupuesto</h3>
+                            <p class="text-slate-600 text-sm">Te enviamos un presupuesto detallado y sin sorpresas, con materiales definidos.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow h-full border-t-4 border-primary">
+                            <span class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-full font-bold shadow-lg">3</span>
+                            <h3 class="font-bold text-lg mb-2 mt-2">Planificación</h3>
+                            <p class="text-slate-600 text-sm">Organizamos los equipos, pedidos de material y fijamos fecha de inicio.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow h-full border-t-4 border-primary">
+                            <span class="absolute -top-4 left-6 w-8 h-8 bg-primary text-white flex items-center justify-center rounded-full font-bold shadow-lg">4</span>
+                            <h3 class="font-bold text-lg mb-2 mt-2">Ejecución</h3>
+                            <p class="text-slate-600 text-sm">Realizamos la obra con supervisión constante y entregamos en plazo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 text-center mb-12">Preguntas Frecuentes</h2>
+                
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div class="border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-800">¿Cuánto cuesta una reforma integral en Rivas?</span>
+                            <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content bg-white">
+                            <div class="p-4 text-slate-600">
+                                El precio de una reforma integral es muy variable y depende de factores como los metros cuadrados, el estado actual de la vivienda y la calidad de los materiales elegidos (gama media, alta o premium). Lo mejor es solicitar una visita gratuita para ofrecerte un presupuesto ajustado y realista.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-800">¿Cuánto tiempo tarda una reforma?</span>
+                            <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content bg-white">
+                            <div class="p-4 text-slate-600">
+                                Los plazos varían según la complejidad. Una reforma de baño o cocina suele tardar entre 5 y 10 días laborables. Una reforma integral de un piso estándar puede oscilar entre 4 y 8 semanas. En nuestro contrato estipulamos la fecha de fin de obra para tu tranquilidad.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-800">¿Gestionáis las licencias de obra?</span>
+                            <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content bg-white">
+                            <div class="p-4 text-slate-600">
+                                Sí. Nos encargamos de tramitar las licencias de obra menor o mayor necesarias en el Ayuntamiento de Rivas-Vaciamadrid, así como la gestión de contenedores de escombros y ocupación de vía pública si fuera necesario.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-800">¿Qué garantía ofrecéis?</span>
+                            <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content bg-white">
+                            <div class="p-4 text-slate-600">
+                                Todas nuestras obras cuentan con la garantía legal vigente. Garantizamos tanto la calidad de los materiales empleados como la correcta ejecución de los trabajos. Si surge cualquier incidencia post-obra, nuestro equipo responderá de inmediato.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Info & Form -->
+                    <div>
+                        <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-6">Solicita tu Presupuesto</h2>
+                        <p class="text-slate-600 mb-8">Rellena el formulario o llámanos. Estaremos encantados de asesorarte en tu proyecto de reforma en Rivas.</p>
+                        
+                        <div class="flex flex-col gap-6 mb-8">
+                            <a href="tel:[PLACEHOLDER_TELEFONO]" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs font-bold text-slate-400 uppercase">Llámanos</span>
+                                    <span class="text-xl font-bold text-slate-800">[PLACEHOLDER_TELEFONO]</span>
+                                </div>
+                            </a>
+                            <a href="mailto:[PLACEHOLDER_EMAIL]" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs font-bold text-slate-400 uppercase">Escríbenos</span>
+                                    <span class="text-lg font-bold text-slate-800">[PLACEHOLDER_EMAIL]</span>
+                                </div>
+                            </a>
+                            <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
+                                <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs font-bold text-slate-400 uppercase">Visítanos</span>
+                                    <span class="text-lg font-bold text-slate-800">[PLACEHOLDER_DIRECCION]</span>
+                                    <span class="block text-sm text-slate-500">Rivas-Vaciamadrid, Madrid</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="bg-white p-6 rounded-xl shadow-lg border border-slate-100" onsubmit="event.preventDefault(); alert('Formulario enviado (simulación).');">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                            </div>
+                            <div class="mb-4">
+                                <label for="service" class="block text-sm font-medium text-slate-700 mb-1">Tipo de Reforma</label>
+                                <select id="service" name="service" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                                    <option value="integral">Reforma Integral</option>
+                                    <option value="bano">Baño</option>
+                                    <option value="cocina">Cocina</option>
+                                    <option value="piso">Piso</option>
+                                    <option value="local">Local Comercial</option>
+                                    <option value="otro">Otros</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Mensaje</label>
+                                <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-lg transition-colors shadow-lg hover:shadow-primary/30">
+                                Solicitar Presupuesto Gratis
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg border border-slate-200 relative bg-slate-100 flex items-center justify-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97166.56881996627!2d-3.785150787320283!3d40.44305929093359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd423b6eeec6e3bb%3A0x74192a2e05773b6a!2sGESAMARCOS!5e0!3m2!1ses!2ses!4v1766159829714!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Reformas Rivas"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center font-bold">R</div>
+                        <span class="font-heading font-bold text-xl">Reformas Rivas</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Empresa líder en reformas integrales y parciales en Rivas-Vaciamadrid. Calidad, compromiso y profesionalidad.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#servicios" class="hover:text-primary transition-colors">Servicios</a></li>
+                        <li><a href="#por-que-nosotros" class="hover:text-primary transition-colors">Por qué nosotros</a></li>
+                        <li><a href="#como-trabajamos" class="hover:text-primary transition-colors">Cómo trabajamos</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#contacto" class="hover:text-primary transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors">Aviso Legal</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Contacto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Rivas-Vaciamadrid, Madrid
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:[PLACEHOLDER_TELEFONO]" class="hover:text-primary">[PLACEHOLDER_TELEFONO]</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:[PLACEHOLDER_EMAIL]" class="hover:text-primary">[PLACEHOLDER_EMAIL]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2024 Reformas en Rivas-Vaciamadrid. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Diseñado con estándares WPO.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/[PLACEHOLDER_TELEFONO]" class="fixed bottom-[10%] right-6 z-40 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110 flex items-center justify-center w-14 h-14" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-slate-900 text-white p-4 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-slate-300 text-center md:text-left">
+                Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra política de cookies.
+            </p>
+            <div class="flex gap-4">
+                <button onclick="acceptCookies()" class="bg-primary hover:bg-secondary text-white text-sm font-bold px-4 py-2 rounded transition-colors">
+                    Aceptar
+                </button>
+                <button onclick="rejectCookies()" class="bg-slate-700 hover:bg-slate-600 text-white text-sm font-bold px-4 py-2 rounded transition-colors">
+                    Rechazar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                mobileMenu.classList.remove('open');
+                mobileOverlay.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            } else {
+                mobileMenu.classList.add('open');
+                mobileOverlay.classList.remove('hidden');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        menuClose.addEventListener('click', toggleMenu);
+        mobileOverlay.addEventListener('click', toggleMenu);
+        
+        // Close menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) toggleMenu();
+            });
+        });
+
+        // Accordion
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            const isActive = content.classList.contains('active');
+            
+            // Close all others (optional - removing this line allows multiple open)
+            document.querySelectorAll('.accordion-content').forEach(c => {
+               if(c !== content) {
+                   c.classList.remove('active');
+                   c.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+               }
+            });
+
+            if (isActive) {
+                content.classList.remove('active');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Cookies
+        function initCookies() {
+            const banner = document.getElementById('cookie-banner');
+            const consent = localStorage.getItem('cookieConsent');
+            
+            if (!consent) {
+                setTimeout(() => {
+                    banner.classList.add('visible');
+                    adjustWhatsAppPosition(true);
+                }, 1000);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            closeCookieBanner();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            closeCookieBanner();
+        }
+
+        function closeCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            banner.classList.remove('visible');
+            adjustWhatsAppPosition(false);
+        }
+
+        // Adjust WhatsApp button to not overlap with cookie banner
+        function adjustWhatsAppPosition(bannerVisible) {
+            const waBtn = document.querySelector('a[href^="https://wa.me"]');
+            if (bannerVisible) {
+                // If banner is about 80px high (approx), push WA button up
+                // Default bottom is 10%, we might need to add pixels or margin
+                waBtn.style.marginBottom = '80px'; 
+            } else {
+                waBtn.style.marginBottom = '0';
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', initCookies);
+    </script>
+</body>
+</html>
+
