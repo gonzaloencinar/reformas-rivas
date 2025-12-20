@@ -36,9 +36,9 @@
                         heading: ['Roboto', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#2563eb', // Blue-600
-                        secondary: '#1e40af', // Blue-800
-                        accent: '#f59e0b', // Amber-500
+                        primary: '#f5be0b', // Amarillo dorado del logo
+                        secondary: '#4a4b4f', // Gris oscuro del logo
+                        accent: '#f5be0b', // Mismo dorado para acentos
                     }
                 }
             }
@@ -164,12 +164,8 @@
     <header class="fixed w-full z-50 bg-white shadow-md transition-all duration-300" id="header">
         <div class="container mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-2 group" aria-label="Inicio">
-                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">R</div>
-                <div class="flex flex-col">
-                    <span class="font-heading font-bold text-lg leading-none text-slate-900 group-hover:text-primary transition-colors">Reformas</span>
-                    <span class="text-xs font-medium text-slate-500">en Rivas-Vaciamadrid</span>
-                </div>
+            <a href="#" class="flex items-center group" aria-label="Inicio">
+                <img src="logo ajustado.png" alt="Reformas en Rivas-Vaciamadrid" class="h-20 w-auto" loading="eager">
             </a>
 
             <!-- Desktop Nav -->
@@ -197,7 +193,7 @@
 
             <!-- CTA Button & Mobile Toggle -->
             <div class="flex items-center gap-4">
-                <a href="tel:[PLACEHOLDER_TELEFONO]" class="hidden md:flex items-center gap-2 bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-primary/30" aria-label="Llamar al [PLACEHOLDER_TELEFONO]">
+                <a href="tel:[PLACEHOLDER_TELEFONO]" class="hidden md:flex items-center gap-2 bg-primary hover:bg-secondary text-white px-5 py-2.5 lg:px-4 lg:py-2 rounded-lg font-bold transition-all shadow-lg hover:shadow-primary/30" aria-label="Llamar al [PLACEHOLDER_TELEFONO]">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     <span>[PLACEHOLDER_TELEFONO]</span>
                 </a>
@@ -242,7 +238,7 @@
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
                 <img 
-                    src="https://placehold.co/1920x1080/1e293b/cbd5e1?text=Reformas+Integrales+en+Rivas" 
+                    src="fondo casa.png" 
                     alt="Empresa de Reformas en Rivas-Vaciamadrid trabajando en una vivienda" 
                     class="w-full h-full object-cover opacity-40"
                     width="1920"
@@ -253,18 +249,18 @@
             </div>
 
             <div class="container mx-auto px-4 z-10 relative text-center max-w-4xl">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-blue-200 border border-blue-500/30 text-sm font-semibold mb-6 tracking-wide backdrop-blur-sm">Expertos en Construcción y Diseño</span>
+                <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 text-sm font-semibold mb-6 tracking-wide backdrop-blur-sm">Expertos en Construcción y Diseño</span>
                 <h1 class="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight text-shadow">
-                    Empresa de Reformas en <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Rivas-Vaciamadrid</span>
+                    Empresa de Reformas en <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-300">Rivas-Vaciamadrid</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                     Transformamos tu vivienda o local con acabados de primera calidad. Cumplimos plazos, presupuesto cerrado y limpieza garantizada.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg font-bold text-lg shadow-lg shadow-blue-900/50 transform hover:scale-105 transition-all">
+                <div class="flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center">
+                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-secondary text-white rounded-lg font-bold text-lg shadow-lg shadow-primary/50 transform hover:scale-105 transition-all">
                         SOLICITAR SERVICIO URGENTE
                     </a>
-                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-semibold backdrop-blur-sm transition-all">
+                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-secondary text-white rounded-lg font-bold text-lg shadow-lg shadow-primary/50 transform hover:scale-105 transition-all">
                         Pedir Presupuesto
                     </a>
                 </div>
@@ -275,21 +271,21 @@
         <div class="bg-white border-b border-slate-100 relative z-20 -mt-8 mx-4 md:mx-auto max-w-6xl rounded-xl shadow-xl p-6 md:p-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
                 <div class="flex flex-col items-center p-2">
-                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="font-bold text-slate-800">+15 Años de Experiencia</h3>
                     <p class="text-sm text-slate-500">Profesionales cualificados</p>
                 </div>
                 <div class="flex flex-col items-center p-2">
-                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="font-bold text-slate-800">Cumplimiento de Plazos</h3>
                     <p class="text-sm text-slate-500">Sin sorpresas ni retrasos</p>
                 </div>
                 <div class="flex flex-col items-center p-2">
-                    <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-3">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </div>
                     <h3 class="font-bold text-slate-800">Precio Cerrado</h3>
@@ -310,7 +306,7 @@
                     <!-- Card 1: Integrales -->
                     <article id="reformas-integrales" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+Integrales" alt="Reformas Integrales en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                            <img src="images/salon nuevo.png" alt="Reformas Integrales en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas integrales</h3>
@@ -325,7 +321,7 @@
                     <!-- Card 2: Baños -->
                     <article id="reformas-banos" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+Integrales" alt="Reformas de Baños en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                            <img src="images/baño nuevo.png" alt="Reformas de Baños en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de baños</h3>
@@ -355,7 +351,7 @@
                     <!-- Card 4: Pisos -->
                     <article id="reformas-pisos" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+de+Pisos" alt="Reformas de Pisos en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                            <img src="images/salon nuevo2.png" alt="Reformas de Pisos en Rivas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400" style="object-position: center 60%;">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de pisos</h3>
@@ -370,7 +366,7 @@
                     <!-- Card 5: Locales -->
                     <article id="reformas-locales" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Reformas+de+Locales" alt="Reformas de Locales Comerciales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                            <img src="images/reforma local.png" alt="Reformas de Locales Comerciales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-slate-900 mb-3">Reformas de locales</h3>
@@ -385,7 +381,7 @@
                     <!-- Card 6: Otros -->
                     <article id="otros-servicios" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-slate-100 group">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Otros+Servicios" alt="Otros Servicios de Reformas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
+                            <img src="images/casco reformas.png" alt="Otros Servicios de Reformas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400">
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-xl text-slate-900 mb-3">Otros servicios</h3>
@@ -405,7 +401,7 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row gap-12 items-center">
                     <div class="lg:w-1/2">
-                        <img src="https://placehold.co/800x600/e2e8f0/1e293b?text=Calidad+en+cada+detalle" alt="Detalle de reforma de calidad" class="rounded-xl shadow-2xl w-full" loading="lazy" width="800" height="600">
+                        <img src="andamio2.png" alt="Detalle de reforma de calidad" class="rounded-xl shadow-2xl w-full" loading="lazy" width="800" height="600">
                     </div>
                     <div class="lg:w-1/2">
                         <h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-6">Por qué elegirnos para tu reforma en Rivas</h2>
@@ -579,7 +575,7 @@
                         
                         <div class="flex flex-col gap-6 mb-8">
                             <a href="tel:[PLACEHOLDER_TELEFONO]" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 </div>
                                 <div>
@@ -588,7 +584,7 @@
                                 </div>
                             </a>
                             <a href="mailto:[PLACEHOLDER_EMAIL]" class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 </div>
                                 <div>
@@ -597,7 +593,7 @@
                                 </div>
                             </a>
                             <div class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
-                                <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center flex-shrink-0">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 </div>
                                 <div>
@@ -652,9 +648,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <div class="flex items-center gap-2 mb-4 text-white">
-                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center font-bold">R</div>
-                        <span class="font-heading font-bold text-xl">Reformas Rivas</span>
+                    <div class="mb-4 text-white">
+                        <span class="font-heading font-bold text-xl">Reformas Rivas-Vaciamadrid Cerro</span>
                     </div>
                     <p class="text-sm text-slate-400 mb-4">Empresa líder en reformas integrales y parciales en Rivas-Vaciamadrid. Calidad, compromiso y profesionalidad.</p>
                 </div>
