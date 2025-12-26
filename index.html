@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reformas en Rivas-Vaciamadrid | Empresa de Reformas Integrales</title>
+    <title>Empresa de Reformas en Rivas Vaciamdrid | Presupuesto en 24h</title>
     <meta name="description" content="Expertos en reformas en Rivas-Vaciamadrid. Especialistas en reformas integrales, baños, cocinas, pisos y locales. Solicita tu presupuesto sin compromiso. Calidad garantizada.">
     <meta name="robots" content="index, follow">
     
@@ -12,12 +12,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Reformas en Rivas-Vaciamadrid | Empresa de Reformas Integrales">
     <meta property="og:description" content="Expertos en reformas en Rivas-Vaciamadrid. Especialistas en reformas integrales, baños, cocinas, pisos y locales.">
-    <meta property="og:url" content="https://[PLACEHOLDER_DOMINIO]">
+    <meta property="og:url" content="https://reformasrivas.com">
     <meta property="og:site_name" content="Reformas en Rivas-Vaciamadrid">
-    <meta property="og:image" content="https://placehold.co/1200x630/e2e8f0/1e293b?text=Reformas+Rivas">
+    <meta property="og:image" content="https://reformasrivas.com/images/logo%20ajustado.png">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://[PLACEHOLDER_DOMINIO]">
+    <link rel="canonical" href="https://reformasrivas.com">
 
     <!-- Preload & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,38 +79,71 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Reformas en Rivas-Vaciamadrid",
-      "image": "https://placehold.co/1200x630",
-      "@id": "https://[PLACEHOLDER_DOMINIO]",
-      "url": "https://[PLACEHOLDER_DOMINIO]",
-      "telephone": "+34919932067",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "[PLACEHOLDER_DIRECCION]",
-        "addressLocality": "Rivas-Vaciamadrid",
-        "postalCode": "28521",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.3516,
-        "longitude": -3.5173
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "20:00"
-      },
-      "sameAs": []
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://reformasrivas.com/",
+          "name": "Reformas Rivas Vaciamadrid Cerro",
+          "url": "https://reformasrivas.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://reformasrivas.com/images/logo%20ajustado.png",
+            "width": 600,
+            "height": 60
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34919932067",
+            "contactType": "customer service",
+            "email": "contacto@reformasrivas.com",
+            "areaServed": "ES",
+            "availableLanguage": "Spanish"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "parentOrganization": {
+            "@id": "https://reformasrivas.com/"
+          },
+          "name": "Reformas Rivas Vaciamadrid Cerro",
+          "image": "https://reformasrivas.com/images/logo%20ajustado.png",
+          "@id": "https://reformasrivas.com/#localbusiness",
+          "url": "https://reformasrivas.com",
+          "telephone": "+34919932067",
+          "email": "contacto@reformasrivas.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rivas-Vaciamadrid",
+            "addressLocality": "Rivas-Vaciamadrid",
+            "postalCode": "28521",
+            "addressRegion": "Madrid",
+            "addressCountry": "ES"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.3516,
+            "longitude": -3.5173
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Rivas-Vaciamadrid"
+          },
+          "sameAs": []
+        }
+      ]
     }
     </script>
     <script type="application/ld+json">
