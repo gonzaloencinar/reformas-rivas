@@ -85,7 +85,7 @@
   }
 
   function initForms() {
-    var forms = document.querySelectorAll('form[data-netlify="true"]');
+    var forms = document.querySelectorAll('form[name="contact"]');
     forms.forEach(function (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
