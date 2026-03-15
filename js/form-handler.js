@@ -23,8 +23,10 @@
 
   function initForms() {
     var forms = document.querySelectorAll('form[name="contact"]');
+    console.log('[LeadX] forms encontrados:', forms.length);
     forms.forEach(function (form) {
       form.addEventListener('submit', function (e) {
+        console.log('[LeadX] submit interceptado');
         e.preventDefault();
 
         var btn = form.querySelector('button[type="submit"]');
@@ -92,6 +94,7 @@
     });
   }
 
+  console.log('[LeadX] script cargado, readyState:', document.readyState);
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initForms);
   } else {
