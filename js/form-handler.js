@@ -16,72 +16,9 @@
     otro: 'Otro servicio',
   };
 
-  function getUtmParams() {
-    var params = new URLSearchParams(window.location.search);
-    var utm = {};
-    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (key) {
-      if (params.get(key)) utm[key] = params.get(key);
-    });
-    return utm;
-  }
-
-  function sendToLeadX(data) {
-    var payload = {
-      client_phone: data.phone,
-      source_metadata: Object.assign({ page: window.location.pathname }, getUtmParams()),
-    };
-
-    if (data.name) payload.client_name = data.name;
-    if (data.email) payload.client_email = data.email;
-    if (data.location) payload.client_city = data.location;
-    if (data.service) payload.service_type = SERVICE_LABELS[data.service] || data.service;
-    if (data.message) payload.description = data.message;
-
-    return fetch(LEADX_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-API-Key': LEADX_API_KEY,
-      },
-      body: JSON.stringify(payload),
-    });
-  }
-
-  function submitToNetlify(form) {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
-    }).catch(function () {});
-  }
-
-  function showSuccess(form, btn, originalBtnText) {
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = originalBtnText;
-    }
-    form.reset();
-    var msg = document.createElement('div');
-    msg.className = 'mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm font-medium text-center';
-    msg.textContent = '¡Solicitud enviada! Nos pondremos en contacto contigo lo antes posible.';
-    form.appendChild(msg);
-    setTimeout(function () {
-      if (msg.parentNode) msg.parentNode.removeChild(msg);
-    }, 8000);
-  }
-
-  function showError(form, btn, originalBtnText) {
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = originalBtnText;
-    }
-    var msg = document.createElement('div');
-    msg.className = 'mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm font-medium text-center';
-    msg.textContent = 'Ha ocurrido un error. Por favor, inténtalo de nuevo o llámanos directamente.';
-    form.appendChild(msg);
-    setTimeout(function () {
-      if (msg.parentNode) msg.parentNode.removeChild(msg);
-    }, 8000);
+  function val(form, fieldName) {
+    var el = form.querySelector('[name="' + fieldName + '"]');
+    return el ? el.value : '';
   }
 
   function initForms() {
@@ -89,32 +26,67 @@
     forms.forEach(function (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        e.stopPropagation();
 
         var btn = form.querySelector('button[type="submit"]');
-        var originalBtnText = btn ? btn.textContent : '';
-        if (btn) {
-          btn.disabled = true;
-          btn.textContent = 'Enviando...';
-        }
+        var originalText = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
 
-        var data = {
-          name: (form.querySelector('[name="name"]') || {}).value || '',
-          phone: (form.querySelector('[name="phone"]') || {}).value || '',
-          email: (form.querySelector('[name="email"]') || {}).value || '',
-          location: (form.querySelector('[name="location"]') || {}).value || '',
-          service: (form.querySelector('[name="service"]') || {}).value || '',
-          message: (form.querySelector('[name="message"]') || {}).value || '',
+        var service = val(form, 'service');
+        var payload = {
+          client_phone: val(form, 'phone'),
+          client_name: val(form, 'name') || undefined,
+          client_email: val(form, 'email') || undefined,
+          client_city: val(form, 'location') || undefined,
+          service_type: service ? (SERVICE_LABELS[service] || service) : undefined,
+          description: val(form, 'message') || undefined,
+          source_metadata: { page: window.location.pathname },
         };
 
-        submitToNetlify(form);
+        // Añadir UTM params si existen
+        var search = new URLSearchParams(window.location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
+          if (search.get(k)) payload.source_metadata[k] = search.get(k);
+        });
 
-        sendToLeadX(data)
+        // Eliminar keys undefined
+        Object.keys(payload).forEach(function (k) {
+          if (payload[k] === undefined) delete payload[k];
+        });
+
+        // Enviar a LeadX
+        fetch(LEADX_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-API-Key': LEADX_API_KEY },
+          body: JSON.stringify(payload),
+        })
           .then(function () {
-            showSuccess(form, btn, originalBtnText);
+            // También enviar a Netlify de forma silenciosa
+            try {
+              var fd = new FormData(form);
+              var parts = [];
+              fd.forEach(function (v, k) { parts.push(encodeURIComponent(k) + '=' + encodeURIComponent(v)); });
+              fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: parts.join('&'),
+              }).catch(function () {});
+            } catch (err) {}
+
+            form.reset();
+            if (btn) { btn.disabled = false; btn.textContent = originalText; }
+            var msg = document.createElement('div');
+            msg.style.cssText = 'margin-top:1rem;padding:1rem;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;font-size:.875rem;text-align:center;';
+            msg.textContent = '¡Solicitud enviada! Nos pondremos en contacto contigo lo antes posible.';
+            form.appendChild(msg);
+            setTimeout(function () { if (msg.parentNode) msg.parentNode.removeChild(msg); }, 8000);
           })
           .catch(function () {
-            showError(form, btn, originalBtnText);
+            if (btn) { btn.disabled = false; btn.textContent = originalText; }
+            var msg = document.createElement('div');
+            msg.style.cssText = 'margin-top:1rem;padding:1rem;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;color:#991b1b;font-size:.875rem;text-align:center;';
+            msg.textContent = 'Ha ocurrido un error. Por favor, inténtalo de nuevo o llámanos directamente.';
+            form.appendChild(msg);
+            setTimeout(function () { if (msg.parentNode) msg.parentNode.removeChild(msg); }, 8000);
           });
       });
     });
