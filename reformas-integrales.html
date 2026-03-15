@@ -804,7 +804,38 @@
             }
         }
     </script>
-    <script src="js/form-handler.js"></script>
+    <script>
+(function(){
+  var KEY='3d3016f3-5d5f-42c6-a5c6-83bd53c77978';
+  var URL='https://www.weleadx.com/api/v1/leads';
+  var SVC={integral:'Reforma Integral',cocina:'Reforma de Cocina',bano:'Reforma de Bano',piso:'Reforma de Piso',local:'Reforma de Local Comercial',fontaneria:'Fontaneria',electricidad:'Electricidad',pintura:'Pintura',pladur:'Pladur',aislamiento:'Aislamiento',otro:'Otro servicio'};
+  function v(f,n){var e=f.querySelector('[name="'+n+'"]');return e?e.value:'';}
+  function send(form){
+    var svc=v(form,'service');
+    var p={client_phone:v(form,'phone'),source_metadata:{page:window.location.pathname}};
+    if(v(form,'name'))p.client_name=v(form,'name');
+    if(v(form,'email'))p.client_email=v(form,'email');
+    if(v(form,'location'))p.client_city=v(form,'location');
+    if(svc)p.service_type=SVC[svc]||svc;
+    if(v(form,'message'))p.description=v(form,'message');
+    console.log('[LeadX] enviando',p);
+    fetch(URL,{method:'POST',headers:{'Content-Type':'application/json','X-API-Key':KEY},body:JSON.stringify(p)})
+      .then(function(r){console.log('[LeadX] respuesta',r.status);})
+      .catch(function(e){console.error('[LeadX] error',e);});
+  }
+  function init(){
+    var forms=document.querySelectorAll('form[name="contact"]');
+    console.log('[LeadX] init, forms:',forms.length);
+    forms.forEach(function(form){
+      form.addEventListener('submit',function(e){
+        console.log('[LeadX] submit!');
+        send(form);
+      });
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+    </script>
 </body>
 </html>
 
