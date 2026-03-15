@@ -849,16 +849,29 @@
     if(svc)p.service_type=SVC[svc]||svc;
     if(v(form,'message'))p.description=v(form,'message');
     console.log('[LeadX] enviando',p);
-    fetch(URL,{method:'POST',headers:{'Content-Type':'application/json','X-API-Key':KEY},body:JSON.stringify(p)})
-      .then(function(r){console.log('[LeadX] respuesta',r.status);})
-      .catch(function(e){console.error('[LeadX] error',e);});
+    fetch(URL,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','X-API-Key':KEY},body:JSON.stringify(p)})
+      .then(function(){
+        form.reset();
+        var m=document.createElement('div');
+        m.style.cssText='margin-top:1rem;padding:1rem;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;font-size:.875rem;text-align:center;';
+        m.textContent='\u00a1Solicitud enviada! Nos pondremos en contacto contigo lo antes posible.';
+        form.appendChild(m);
+        setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m);},8000);
+      })
+      .catch(function(){
+        var m=document.createElement('div');
+        m.style.cssText='margin-top:1rem;padding:1rem;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;color:#991b1b;font-size:.875rem;text-align:center;';
+        m.textContent='Ha ocurrido un error. Por favor, int\u00e9ntalo de nuevo o ll\u00e1menos.';
+        form.appendChild(m);
+        setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m);},8000);
+      });
   }
   function init(){
     var forms=document.querySelectorAll('form[name="contact"]');
     console.log('[LeadX] init, forms:',forms.length);
     forms.forEach(function(form){
       form.addEventListener('submit',function(e){
-        console.log('[LeadX] submit!');
+        e.preventDefault();
         send(form);
       });
     });
