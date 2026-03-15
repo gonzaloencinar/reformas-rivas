@@ -839,6 +839,9 @@
   var SVC={integral:'Reforma Integral',cocina:'Reforma de Cocina',bano:'Reforma de Bano',piso:'Reforma de Piso',local:'Reforma de Local Comercial',fontaneria:'Fontaneria',electricidad:'Electricidad',pintura:'Pintura',pladur:'Pladur',aislamiento:'Aislamiento',otro:'Otro servicio'};
   function v(f,n){var e=f.querySelector('[name="'+n+'"]');return e?e.value:'';}
   function send(form){
+    var btn=form.querySelector('button[type="submit"]');
+    var origText=btn?btn.textContent:'';
+    if(btn){btn.disabled=true;btn.textContent='Enviando...';}
     var svc=v(form,'service');
     var p={client_phone:v(form,'phone'),source_metadata:{page:window.location.pathname}};
     if(v(form,'name'))p.client_name=v(form,'name');
@@ -846,20 +849,19 @@
     if(v(form,'location'))p.client_city=v(form,'location');
     if(svc)p.service_type=SVC[svc]||svc;
     if(v(form,'message'))p.description=v(form,'message');
-    console.log('[LeadX] enviando',p);
     fetch(URL,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','X-API-Key':KEY},body:JSON.stringify(p)})
       .then(function(){
-        form.reset();
-        var m=document.createElement('div');
-        m.style.cssText='margin-top:1rem;padding:1rem;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;font-size:.875rem;text-align:center;';
-        m.textContent='\u00a1Solicitud enviada! Nos pondremos en contacto contigo lo antes posible.';
-        form.appendChild(m);
-        setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m);},8000);
+        form.innerHTML='<div style="padding:2.5rem 1rem;text-align:center;">'
+          +'<div style="width:56px;height:56px;background:#f0fdf4;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.75rem;">\u2713</div>'
+          +'<h3 style="font-size:1.25rem;font-weight:700;color:#166534;margin-bottom:.5rem;">\u00a1Solicitud enviada!</h3>'
+          +'<p style="color:#374151;font-size:.95rem;">Nos pondremos en contacto contigo lo antes posible.</p>'
+          +'</div>';
       })
       .catch(function(){
+        if(btn){btn.disabled=false;btn.textContent=origText;}
         var m=document.createElement('div');
         m.style.cssText='margin-top:1rem;padding:1rem;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;color:#991b1b;font-size:.875rem;text-align:center;';
-        m.textContent='Ha ocurrido un error. Por favor, int\u00e9ntalo de nuevo o ll\u00e1menos.';
+        m.textContent='Ha ocurrido un error. Por favor, int\u00e9ntalo de nuevo o ll\u00e1menos directamente.';
         form.appendChild(m);
         setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m);},8000);
       });
