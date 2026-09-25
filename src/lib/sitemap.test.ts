@@ -8,15 +8,15 @@ describe('buildSitemap', () => {
   it('incluye las nueve URLs indexables con URLs limpias', () => {
     const locs = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
     expect(locs).toEqual([
-      'https://reformasrivas.com/',
-      'https://reformasrivas.com/reformas-integrales',
-      'https://reformasrivas.com/reformas-banos',
-      'https://reformasrivas.com/reformas-cocinas',
-      'https://reformasrivas.com/reformas-pisos',
-      'https://reformasrivas.com/reformas-locales',
-      'https://reformasrivas.com/otros-servicios',
-      'https://reformasrivas.com/nuestros-proyectos',
-      'https://reformasrivas.com/contacto',
+      'https://www.reformasrivas.com/',
+      'https://www.reformasrivas.com/reformas-integrales',
+      'https://www.reformasrivas.com/reformas-banos',
+      'https://www.reformasrivas.com/reformas-cocinas',
+      'https://www.reformasrivas.com/reformas-pisos',
+      'https://www.reformasrivas.com/reformas-locales',
+      'https://www.reformasrivas.com/otros-servicios',
+      'https://www.reformasrivas.com/nuestros-proyectos',
+      'https://www.reformasrivas.com/contacto',
     ])
   })
 

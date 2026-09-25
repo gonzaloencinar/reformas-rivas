@@ -5,7 +5,7 @@
 export const site = {
   name: 'Reformas en Rivas-Vaciamadrid',
   legalName: 'Reformas Rivas-Vaciamadrid Cerro',
-  url: 'https://reformasrivas.com',
+  url: 'https://www.reformasrivas.com',
   locale: 'es_ES',
   phone: '+34919932067',
   phoneDisplay: '+34919932067',
@@ -13,7 +13,7 @@ export const site = {
   email: 'contacto@reformasrivas.com',
   whatsappUrl: 'https://wa.me/+34919932067',
   logoPath: '/images/logo ajustado.png',
-  ogImage: 'https://reformasrivas.com/images/logo%20ajustado.png',
+  ogImage: 'https://www.reformasrivas.com/images/logo%20ajustado.png',
   address: {
     street: 'Rda. del Parque Bellavista, 4, Local 4',
     postalCode: '28522',

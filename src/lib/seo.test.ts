@@ -16,8 +16,8 @@ describe('pageHead', () => {
   })
 
   it('genera canonical y og:url absolutos', () => {
-    expect(head.links).toEqual([{ rel: 'canonical', href: 'https://reformasrivas.com/contacto' }])
-    expect(head.meta).toContainEqual({ property: 'og:url', content: 'https://reformasrivas.com/contacto' })
+    expect(head.links).toEqual([{ rel: 'canonical', href: 'https://www.reformasrivas.com/contacto' }])
+    expect(head.meta).toContainEqual({ property: 'og:url', content: 'https://www.reformasrivas.com/contacto' })
   })
 
   it('serializa JSON-LD como script', () => {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://reformasrivas.com/sitemap.xml
+Sitemap: https://www.reformasrivas.com/sitemap.xml
