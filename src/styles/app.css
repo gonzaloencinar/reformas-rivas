@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #f5be0b; /* Amarillo dorado del logo */
+  --color-secondary: #4a4b4f; /* Gris oscuro del logo */
+  --color-accent: #f5be0b;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@layer components {
+  /* Animaciones de las tarjetas "Antes y Después" de las páginas de servicio */
+  .before-after-container {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .before-after-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  .before-after-image-wrapper {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+  .before-after-image-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  .before-after-image-wrapper img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .before-after-image-wrapper:hover img {
+    transform: scale(1.1);
+  }
+  .before-after-label {
+    transition: all 0.3s ease;
+  }
+  .before-after-image-wrapper:hover .before-after-label {
+    background: rgba(245, 190, 11, 0.9);
+    transform: translateY(-5px);
+  }
+}
